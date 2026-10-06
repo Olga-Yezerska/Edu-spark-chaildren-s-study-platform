@@ -115,3 +115,36 @@ main {
 ::selection {
     background-color: rgb(45, 3, 75);
 }
+
+@media (max-width: 768px) {
+    header 
+    {
+        position: static;
+    }
+    main 
+    {
+        margin-top: 0;
+    }
+    aside 
+    {
+        position: static;
+    }
+    nav ul 
+    {
+        flex-direction: column;
+        gap: 8px;
+    }
+    img 
+    {
+        max-width: 100%;
+        height: auto;
+    }
+    #courses-table 
+    {
+        overflow-x: auto;
+    }
+    textarea 
+    {
+        max-width: 100%;
+    }
+}
