@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts\RFDewiExpanded-Ultrabold.ttf') format('truetype');
+}
+
+* {
+    background: #FEE14D;
+    color: black;
+}
+
+h1, h2, h3 {
+    font-family: 'MyFont', sans-serif;
+}
+
+p, li, a , th, td {
+    font-family: "Arial", sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+aside {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 5;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+
+header img {
+    float: left;
+    margin-right: 15px;
+}
+
+nav button {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+nav button:hover {
+    background-color: rgb(219, 151, 48);
+    color: white;
+    border-color: white;
+}
+
+aside button {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+#courses-table:hover {
+    transform: translateX(2vw);
+}
+
+#main-article {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+footer{
+    position: relative;
+}
+
+main {
+    margin-top: 150px;
+}
+
+#contacts {
+    transition-delay: 2s;
+}
+
+#contacts:focus-within {
+    box-shadow: 0 0 15px rgba(128, 128, 128, 1);
+}
+
+#courses-table caption::first-letter {
+    color: rgb(46, 97, 61);
+}
+
+.course{
+    border-right: thin solid rgb(45, 3, 75);
+    border-left: thin dashed rgb(45, 3, 75);
+}
+
+.course img+h2{
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+}
+
+.course img:hover {
+    filter: saturate(150%);
+}
+
+#contacts-courses a:visited {
+    color: rgb(125, 10, 10);
+}
+
+#main-article::before {
+    content: "📘 ";
+}
+
+::selection {
+    background-color: rgb(45, 3, 75);
+}

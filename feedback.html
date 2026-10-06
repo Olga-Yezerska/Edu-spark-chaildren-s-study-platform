@@ -2,6 +2,25 @@
 <html>
     <head>
         <title>EDU SPARK</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;  
+                gap: 10px;  
+            }
+            
+            input[type="submit"] {
+                align-self: center;
+            }
+            textarea{
+                order: -1;
+                width: 100%;
+                min-height: 100px;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -24,10 +43,9 @@
                 <br>
                 <label>Child`s gender</label>
                 <select>
-                    <option>Man</option>
-                    <option>Woman</option>
+                    <option>Boy</option>
+                    <option>Girl</option>
                 </select>
-                <br>
                 </fieldset>
                 <label>Purpose</label>
                 <select>
@@ -36,13 +54,10 @@
                     <option>Suggestion</option>
                     <option>Error</option>
                 </select>
-                <br>
                 <label>Details</label>
                 <textarea cols="20" rows="2" maxlength="500"></textarea>
-                <br>
                 <label>Consent to information processing</label>
                 <input type="checkbox" required>
-                <br>
                 <label>Submit</label>
                 <input type="submit">
             </form>

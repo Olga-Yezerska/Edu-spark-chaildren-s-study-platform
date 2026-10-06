@@ -2,18 +2,42 @@
 <html>
     <head>
         <title>EDU SPARK</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            header{
+                position: relative;
+            }
+            main {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-items: stretch;
+                gap: 60px;
+            }
+            main > article:first-child {
+                grid-column: 1;
+                grid-row: span 2;
+                align-self: end;
+            }
+            footer{
+                position: fixed;
+                bottom: 0;
+            }
+            .course h2{
+                position: sticky;
+                top: 0;
+            }
+        </style>
     </head>
     <body>
         <header>
-        <img src="/assets/logo.svg" height="180" width="180">
-        <h1><span class="label">"EDU SPARK"</span> - Children's Learning Portal</h1>
-        <a href="main.html">
-            <button>Main</button>
-        </a>
+            <img src="/assets/logo.svg" height="80" width="80">
+            <h1><span class="label">"EDU SPARK"</span> - Children's Learning Portal</h1>
+            <a href="main.html">
+                <button>Main</button>
+            </a>
         </header>
         <main>
-            <h2>EDU SPARK Courses</h2>
-            <article>
+            <article class="course">
                 <img src="/assets/course1.png" height="100" width="100">
                 <h2>Logic Detective</h2>
                 <h3>Lessons</h3>
@@ -26,7 +50,7 @@
                 </ul>
                 <h3>Task types: logic puzzles, pattern matching, “find the odd one”, quizzes, detective challenges.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course2.png" height="100" width="100">
                 <h2>Math Adventures</h2>
                 <h3>Lessons:</h3>
@@ -39,7 +63,7 @@
                 </ul>
                 <h3>Task types: mathematical puzzles, calculations, drag-and-drop, multiple-choice questions, timed challenges.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course3.png" height="100" width="100">
                 <h2>Little Scientist</h2>
                 <h3>Lessons:</h3>
@@ -52,7 +76,7 @@
                 </ul>
                 <h3>Task types: interactive experiments, “What will happen?” questions, true or false, predictions, quizzes.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course4.png" height="100" width="100">
                 <h2>World Explorer</h2>
                 <h3>Lessons: </h3>
@@ -65,7 +89,7 @@
                 </ul>
                 <h3>Task types: interactive maps, quizzes, matching tasks, “guess the place”, geography quests.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course5.png" height="100" width="100">
                 <h2>Animal Planet</h2>
                 <h3>Lessons:</h3>
@@ -78,7 +102,7 @@
                 </ul>
                 <h3>Task types: picture quizzes, matching animals to habitats, riddles, “guess who”, sorting tasks.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course6.png" height="100" width="100">
                 <h2>Eco Heroes</h2>
                 <h3>Lessons:</h3>
@@ -91,7 +115,7 @@
                 </ul>
                 <h3>Task types: sorting games, situational tasks, quizzes, drag-and-drop, eco challenges.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course7.png" height="100" width="100">
                 <h2>Code Quest</h2>
                 <h3>Lessons: </h3>
@@ -104,7 +128,7 @@
                 </ul>
                 <h3>Task types: arrange-the-steps tasks, algorithm puzzles, drag-and-drop, error detection, interactive challenges.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course8.png" height="100" width="100">
                 <h2>Smart Money</h2>
                 <h3>Lessons: </h3>
@@ -117,7 +141,7 @@
                 </ul>
                 <h3>Task types: situational games, budgeting tasks, multiple-choice questions, decision-making challenges, quizzes.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course9.png" height="100" width="100">
                 <h2>Story Quest</h2>
                 <h3>Lessons: </h3>
@@ -130,7 +154,7 @@
                 </ul>
                 <h3>Task types: text-based quizzes, story sequencing, matching, creative writing tasks, comprehension questions.</h3>
             </article>
-            <article>
+            <article class="course">
                 <img src="/assets/course10.png" height="100" width="100">
                 <h2>Creative Lab</h2>
                 <h3>Lessons: </h3>
@@ -144,7 +168,7 @@
                 <h3>Task types: creative challenges, image-based tasks, color matching, drawing prompts, “create your own” assignments.</h3>
             </article>
         </main>
-        <footer id="contacts">
+        <footer id="contacts-courses">
             <p>EDU SPARK</p>
             <a href="https://mon.gov.ua" target="_blank">Міністерство освіти і науки України</a>
             <a href="https://nus.org.ua" target="_blank">Нова українська школа</a>
