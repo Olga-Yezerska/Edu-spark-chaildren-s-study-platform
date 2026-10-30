@@ -4,12 +4,13 @@
 }
 
 * {
-    background: #FEE14D;
+    background: #fef8db;
     color: black;
 }
 
 h1, h2, h3 {
     font-family: 'MyFont', sans-serif;
+    font-size: 32px;
 }
 
 p, li, a , th, td {
@@ -46,7 +47,7 @@ nav button {
 }
 
 nav button:hover {
-    background-color: rgb(219, 151, 48);
+    background-color: rgb(195, 175, 146);
     color: white;
     border-color: white;
 }
@@ -147,4 +148,13 @@ main {
     {
         max-width: 100%;
     }
+}
+
+.toy {
+    position: absolute;
+    z-index: 1;
+    background: transparent;
+    pointer-events: none;
+    font-size: 80px;
+    line-height: 1;
 }

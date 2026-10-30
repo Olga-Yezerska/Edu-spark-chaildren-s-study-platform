@@ -8,6 +8,10 @@ class Child {
         this.date = date;           
         this.time = time;           
     }
+
+    getNameSurname() {
+        console.log(this.name + " " + this.surname)
+    }
 }
 
 let childrenList = [
@@ -76,11 +80,15 @@ function countByAgeClass(list) {
 function sortByEmail(list) {
     let sorted = list.slice();   
     sorted.sort((a, b) => {
-        if (a.email < b.email) return -1;
-        if (a.email > b.email) return 1;
+        if (a.email < b.email) {
+            return -1;
+        }
+        if (a.email > b.email) {
+            return 1;
+        }
         return 0;
     });
-    console.log("Kids by E-mail (alphabetically): ");
+    console.log("Kids by E-mail: ");
     sorted.forEach(c => {
         console.log("  " + c.email + " - purpose: " + c.purpose);
     });
@@ -99,3 +107,6 @@ countByAgeClass(childrenList);
 
 console.log("Children: 4.");
 sortByEmail(childrenList);
+
+console.log(num)
+let num = 5

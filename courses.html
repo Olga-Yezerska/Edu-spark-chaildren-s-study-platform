@@ -4,7 +4,12 @@
         <title>EDU SPARK</title>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="accordion.js"></script>
         <style>
+            main 
+            { 
+                margin-top: 20px; 
+            }
             header{
                 position: relative;
             }
@@ -37,6 +42,11 @@
                 <button>Main</button>
             </a>
         </header>
+        <section id="accordion">
+            <h2>Course descriptions</h2>
+            <button onclick="closeAll()">Collapse all</button>
+            <button onclick="openAll()">Expand all</button>
+        </section>
         <main>
             <article class="course">
                 <img src="/assets/course1.png" height="100" width="100">

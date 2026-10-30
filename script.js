@@ -1,4 +1,3 @@
-
 let courses = [
     {id: "001", name: "Mathematics Fundamentals", author: "Olena Koval", teachers: ["Olena Koval"], type: ["Quizzes", "calculations"], users_1day: 145, user_2day: 172, duration: { hours: 2, minutes: 30 }},
     {id: "002", name: "English for Beginners", author: "Iryna Melnyk", teachers: ["Iryna Melnyk", "Anna Bondar"], type: ["Multiple-choice questions", "listening exercises"], users_1day: 210, user_2day: 198, duration: { hours: 3, minutes: 45 }},
@@ -17,9 +16,9 @@ function sortAndAverageUsers(arr) {
     let sorted = arr.slice(); //копія масиву
     sorted.sort((a, b) => {
         if (a.duration.hours !== b.duration.hours) {
-            return a.duration.hours - b.duration.hours;   //спочатку порівнюємо години
+            return a.duration.hours - b.duration.hours; //спочатку порівнюємо години
         }
-        return a.duration.minutes - b.duration.minutes;   //години однакові - порівнюємо хвилини
+        return a.duration.minutes - b.duration.minutes; //години однакові - порівнюємо хвилини
     });
  
     console.log("Courses by duration: ");
@@ -81,9 +80,9 @@ function studyTogether(arr) {
     console.log("Courses at the same time: " + arr.length + ", coef: " + factor);
  
     arr.forEach(c => {
-        let hours = c.duration.hours * factor;                           
+        let hours = c.duration.hours * factor;                        
         let minutes = c.duration.minutes * factor;                        
-        minutes = minutes + (hours - Math.floor(hours)) * 60; //0.5 год = 30 хв, додаємо до хвилин
+        minutes = minutes + (hours - Math.floor(hours)) * 60; //0.5 год = 30 хв, додаємо до хвилин 
         hours = Math.floor(hours) + Math.floor(minutes / 60); //60 хв = 1 год, переносимо в години
         minutes = Math.round(minutes % 60); //решта хвилин
         console.log("  " + c.name + ": " + hours + " h " + minutes + " min");
@@ -99,7 +98,7 @@ findMinDay2(courses);
  
 console.log("3.");
 addCourse(courses, {id: "S011", name: "Drawing for Kids", author: "Lesia Kravets", teachers: ["Lesia Kravets"], type: ["Creative tasks"], users_1day: 90, user_2day: 101, duration: { hours: 2, minutes: 15 }});
-addCourse(courses, {id: "S012", name: "Music Basics", author: "Taras Hrytsenko"});   //неповний
+addCourse(courses, {id: "S012", name: "Music Basics", author: "Taras Hrytsenko"}); //неповний
 courses.forEach(c => {
     console.log("  " + c.name + " (" + c.author + ")");
 });
@@ -107,4 +106,3 @@ courses.forEach(c => {
 console.log("4.");
 studyTogether(courses.slice(1, 3)); //2 курси
 studyTogether(courses.slice(1, 7)); //6 курсів
- 
